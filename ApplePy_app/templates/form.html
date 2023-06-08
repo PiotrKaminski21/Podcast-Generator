@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Podcast Generator</title>
+</head>
+<body>
+    <h1>Podcast Generator</h1>
+    <form method="post" action="{% url 'form' %}">
+        {% csrf_token %}
+        {% for genre in genres %}
+            <input type="radio" name="genre" value="{{ genre }}">
+            <label>{{ genre }}</label><br>
+        {% endfor %}
+        <button type="submit">Wybierz</button>
+    </form>
+</body>
+</html>

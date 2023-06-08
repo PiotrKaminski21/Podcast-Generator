@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Podcast Generator</title>
+</head>
+<body>
+    <h1>Podcast Generator</h1>
+
+    {% if selected_genre %}
+        <h2>Kategoria: {{ selected_genre }}</h2>
+    {% endif %}
+
+    {% if message %}
+        <p>{{ message }}</p>
+    {% else %}
+        {% for podcast in podcasts %}
+            <h3>{{ podcast.author }}</h3>
+            <h4>{{ podcast.name }}</h4>
+            <img src="{{ podcast.image }}" alt="Podcast Image">
+            <p>{{ podcast.summary }}</p>
+            <hr>
+        {% endfor %}
+    {% endif %}
+    <a href="{% url 'home' %}" class="btn">Strona główna</a>
+</body>
+</html>

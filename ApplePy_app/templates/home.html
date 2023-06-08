@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Podcast Generator</title>
+</head>
+<body>
+
+<h1>Podcast Generator</h1>
+    <p>Opis Twojej aplikacji.</p>
+    <img src="{% static 'images/itunes_logo.png' %}" alt="iTunes Logo">
+    <img src="{% static 'images/apple_logo.png' %}" alt="Apple Logo">
+    <a href="{% url 'form' %}" class="btn">Dalej</a>
+
+</body>
+</html>
