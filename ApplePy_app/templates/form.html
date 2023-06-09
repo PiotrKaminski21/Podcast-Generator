@@ -4,14 +4,16 @@
     <title>Podcast Generator</title>
 </head>
 <body>
+        <a href="{% url 'home' %}" class="btn">Main page</a>
     <h1>Podcast Generator</h1>
+        <h4>Choose your favourite podcast genre</h4>
     <form method="post" action="{% url 'form' %}">
         {% csrf_token %}
         {% for genre in genres %}
             <input type="radio" name="genre" value="{{ genre }}">
             <label>{{ genre }}</label><br>
         {% endfor %}
-        <button type="submit">Wybierz</button>
+        <button type="submit">Submit</button>
     </form>
 </body>
 </html>

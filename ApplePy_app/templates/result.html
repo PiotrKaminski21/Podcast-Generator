@@ -4,10 +4,12 @@
     <title>Podcast Generator</title>
 </head>
 <body>
+
+    <a href="{% url 'home' %}" class="btn">Main page</a>
     <h1>Podcast Generator</h1>
 
     {% if selected_genre %}
-        <h2>Kategoria: {{ selected_genre }}</h2>
+        <h2>Genre: {{ selected_genre }}</h2>
     {% endif %}
 
     {% if message %}
@@ -21,6 +23,6 @@
             <hr>
         {% endfor %}
     {% endif %}
-    <a href="{% url 'home' %}" class="btn">Strona główna</a>
+
 </body>
 </html>

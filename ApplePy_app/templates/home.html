@@ -8,11 +8,25 @@
 </head>
 <body>
 
+    {% for message in messages %}
+        <strong>Message:</strong> {{ message }}
+    {% endfor %}
+
+    {% if user.is_authenticated %}
+    <h3>Hello {{ user.username }}!</h3>
+    <h4>You're successfully logged in.</h4>
+    <button type="submit"><a href="/signout">Logout</a></button>
+    {% else %}
+    <button type="submit"><a href="/signup">Register</a></button>
+    <button type="submit"><a href="/signin">Login</a></button>
+    {% endif %}
+    <button type="submit"><a href="{% url 'form' %}" class="btn">Home</a></button>
+
 <h1>Podcast Generator</h1>
-    <p>Opis Twojej aplikacji.</p>
-    <img src="{% static 'images/itunes_logo.png' %}" alt="iTunes Logo">
-    <img src="{% static 'images/apple_logo.png' %}" alt="Apple Logo">
-    <a href="{% url 'form' %}" class="btn">Dalej</a>
+    <p>PodcastFinder - Application for finding podcasts</p>
+    <img src="{% static 'images/itune-logo.png' %}" alt="iTunes Logo">
+    <img src="{% static 'images/apple-logo.png' %}" alt="Apple Logo">
+
 
 </body>
 </html>
