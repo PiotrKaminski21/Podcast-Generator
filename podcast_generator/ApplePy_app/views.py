@@ -21,6 +21,7 @@ def get_popular_podcasts():
             podcast_summary = podcast["summary"]["label"]
             podcast_genre = podcast["category"]["attributes"]["label"]
 
+
             # ze względu na długie opisy tutaj ograniczam je do dwóch zdań, wychodzi to nawet nieźle
             summary_sentences = re.split(r'[.!?]',
                                          podcast_summary)  # tutaj program rozpoznaje znaki kończące zdania i zatrzyma się po dwóch takich znakach
@@ -32,7 +33,8 @@ def get_popular_podcasts():
                 "name": podcast_name,
                 "image": podcast_image,
                 "summary": podcast_summary,
-                "genre": podcast_genre
+                "genre": podcast_genre,
+
             })
 
         return podcasts
@@ -85,8 +87,8 @@ if selected_genre_name in all_genres:
         print("No podcasts found in the selected category.")
     else:
         # losowanie trzech podcastów z wybranej kategorii lub wyświetlanie jakichkolwiek dostępnych w tym gatunku
-        if len(selected_podcasts) >= 3:
-            selected_podcasts = random.sample(selected_podcasts, 3)
+        if len(selected_podcasts) >= 9:
+            selected_podcasts = random.sample(selected_podcasts, 9)
 
         # wybrane podcasty
         for podcast in selected_podcasts:
@@ -94,6 +96,7 @@ if selected_genre_name in all_genres:
             print(f"Name: {podcast['name']}")
             print(f"Image: {podcast['image']}")
             print(f"Summary: {podcast['summary']}")
+
             print("---")
 
 else:
@@ -126,8 +129,8 @@ class GenreFormView(View):
                 message = "No podcasts found in the selected category."
                 return render(request, 'result.html', {'message': message})
             else:
-                if len(selected_podcasts) >= 3:
-                    selected_podcasts = random.sample(selected_podcasts, 3)
+                if len(selected_podcasts) >= 9:
+                    selected_podcasts = random.sample(selected_podcasts, 9)
 
                 return render(request, 'result.html', {'podcasts': selected_podcasts})
         else:

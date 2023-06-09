@@ -4,12 +4,44 @@
 <html>
 <head>
     <title>Podcast Generator</title>
+    {% block css_files %}
+        <link rel="stylesheet" href="{% static "style.css" %}">
+    {% endblock %}
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
 </head>
 <body>
-    <h1>Podcast Generator</h1>
-    <p>Opis Twojej aplikacji.</p>
+
+<nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <a class="navbar-brand my-brand" href="{% url 'home' %}">Podcast Generator</a>
+      </div>
+      <div class="col">
+        <a class="navbar-brand my-brand" href="{% url 'form' %}">Go to form</a>
+      </div>
+      <div class="col">
+        <a class="navbar-brand my-brand" href="{% url 'result' %}">Result</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+
+    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique et ipsum sit amet laoreet. Vestibulum ullamcorper libero at facilisis egestas. Phasellus dictum scelerisque nisi, a euismod libero auctor vitae. Aenean porttitor gravida mollis. Duis diam est, maximus sit amet leo sit amet, fermentum dictum eros. Donec placerat accumsan libero, vitae malesuada urna consectetur in. Integer eget suscipit lacus, quis vehicula erat. Mauris vulputate feugiat ipsum. Sed commodo, mauris id pellentesque viverra, tortor urna rhoncus mauris, id semper ipsum justo scelerisque urna. Nunc vitae commodo sapien, id suscipit ante. In sagittis nisi metus, non ornare turpis sagittis ac. Donec eu diam venenatis nulla ornare molestie. Pellentesque ac leo sit amet elit aliquet vulputate. Nulla at enim nec mauris tempor placerat. Vivamus maximus condimentum nulla in commodo. Donec tincidunt, tortor non auctor tincidunt, dolor orci gravida diam, in viverra risus mauris molestie ipsum.
+
+Donec molestie dui arcu, ut sagittis odio congue eu. Mauris imperdiet rutrum tortor nec gravida. Nullam sit amet nisi auctor, blandit dui et, auctor magna. Mauris vel pretium felis. Suspendisse gravida, leo vel placerat tempor, eros massa laoreet turpis, at sodales eros mi quis neque. Vestibulum at velit vel ante congue porta. Morbi dignissim malesuada commodo. Duis imperdiet ligula libero, nec sagittis dui tempus quis. Donec rhoncus risus metus, id eleifend lectus volutpat ut. Quisque sit amet lacus eu elit facilisis molestie. Fusce auctor purus in mauris tincidunt, at venenatis lectus aliquet. Integer elit tortor, commodo vitae iaculis ut, aliquam a quam. Aliquam a ullamcorper magna.
+
+Sed non iaculis turpis, id ultrices arcu. Morbi porttitor lacinia sapien sed efficitur. Integer a porta libero. Sed commodo sapien lorem, vel commodo arcu laoreet at. Donec et mi ex. Morbi venenatis rhoncus turpis, nec dignissim lorem rhoncus at. Duis interdum auctor ligula, vel convallis massa commodo et. Curabitur quis semper nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc luctus libero non tincidunt tempor. Praesent condimentum odio eget lobortis dignissim. Cras sapien turpis, feugiat at fringilla eget, mattis eget lectus. Quisque ac posuere magna, vitae tristique urna. Aenean finibus dui ac nisi finibus placerat.
+
+Morbi mattis leo sit amet sem suscipit, vel ullamcorper sapien eleifend. Nullam nec mi sed elit commodo ornare id lacinia leo. Morbi non consequat urna, quis placerat nunc. Suspendisse ac tellus libero. Pellentesque ullamcorper pretium tempus. Proin pulvinar, urna in tristique consequat, libero enim accumsan ante, id ullamcorper velit massa a turpis. Nulla facilisi. Ut tristique lorem sit amet nisl laoreet maximus. Aenean semper odio quis augue dictum dignissim. Duis blandit felis justo, eget consectetur enim vestibulum ac. Pellentesque imperdiet erat tortor, id molestie odio pretium nec. Pellentesque quis sem ac leo finibus faucibus. Nulla eget quam vitae neque consectetur accumsan. Nam at porta mi.
+    </p>
     <img src="{% static 'images/itunes_logo.png' %}" alt="iTunes Logo">
     <img src="{% static 'images/apple_logo.png' %}" alt="Apple Logo">
-    <a href="{% url 'form' %}" class="btn">Dalej</a>
+    <a href="{% url 'form' %}" class="btn btn-dark" role ="button">Dalej</a>
+
 </body>
 </html>

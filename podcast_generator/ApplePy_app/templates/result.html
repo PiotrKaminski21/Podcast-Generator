@@ -1,7 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Podcast Generator</title>
+    <link rel="stylesheet" href="{% static "style.css" %}">
+
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
 </head>
 <body>
     <h1>Podcast Generator</h1>
@@ -16,6 +22,6 @@
             <hr>
         {% endfor %}
     {% endif %}
-    <a href="{% url 'home' %}" class="btn">Strona główna</a>
+    <a href="{% url 'home' %}" class="btn btn-dark" role ="button">Main Page</a>
 </body>
 </html>

@@ -1,17 +1,25 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Podcast Generator</title>
+    <link rel="stylesheet" href={% static "style.css" %}>
+
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+
 </head>
 <body>
     <h1>Podcast Generator</h1>
+    <p>Choose one of the category below:</p>
     <form method="post" action="{% url 'form' %}">
         {% csrf_token %}
         {% for genre in genres %}
             <input type="radio" name="genre" value="{{ genre }}">
             <label>{{ genre }}</label><br>
         {% endfor %}
-        <button type="submit">Wybierz</button>
+        <button type="submit" class="btn btn-dark">Submit</button>
     </form>
 </body>
 </html>
