@@ -1,6 +1,7 @@
+
 {% load static %}
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <title>Podcast Generator</title>
     <link rel="stylesheet" href="{% static "style.css" %}">
@@ -10,18 +11,50 @@
     {% bootstrap_javascript %}
 </head>
 <body>
-    <h1>Podcast Generator</h1>
+
+
+<nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-auto">
+        <a class="navbar-brand my-brand" href="{% url 'home' %}">Podcast Generator</a>
+      </div>
+    </div>
+  </div>
+</nav>
+<br>
+<div class="container px-3 py-1">
     {% if message %}
         <p>{{ message }}</p>
     {% else %}
         {% for podcast in podcasts %}
-            <h2>{{ podcast.author }}</h2>
-            <h3>{{ podcast.name }}</h3>
-            <img src="{{ podcast.image }}" alt="Podcast Image">
-            <p>{{ podcast.summary }}</p>
-            <hr>
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <h3>{{ podcast.author }}</h3>
+                    <h5><b>{{ podcast.name }}</b></h5>
+                    <img src="{{ podcast.image }}" alt="Podcast Image">
+                </div>
+                <div class="col-12 col-md-6">
+                    <p class="py-1"><i>{{ podcast.summary }}</i></p>
+                    <a href="{% url 'home' %}" class="btn btn-dark" role ="button">Go to: {{ podcast.name }} <b>&rarr;</b></a>
+                </div>
+            </div>
+            <hr class="my-4">
         {% endfor %}
     {% endif %}
-    <a href="{% url 'home' %}" class="btn btn-dark" role ="button">Main Page</a>
+</div>
+
+<footer class="navbar bg-dark border-top border-top-dark">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col text-end">
+        <a href="{% url 'home' %}" class="text-light text-decoration-none">
+          Back to main page
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

@@ -1,25 +1,105 @@
+{#{% load static %}#}
+{#<!DOCTYPE html>#}
+{#<html>#}
+{#<head>#}
+{#    <title>Podcast Generator</title>#}
+{#    <link rel="stylesheet" href={% static "style.css" %}>#}
+{##}
+{#    {% load bootstrap5 %}#}
+{#    {% bootstrap_css %}#}
+{#    {% bootstrap_javascript %}#}
+{##}
+{#</head>#}
+{#<body>#}
+{##}
+{#<nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">#}
+{#  <div class="container-fluid">#}
+{#    <div class="row">#}
+{#      <div class="col">#}
+{#        <a class="navbar-brand my-brand" href="{% url 'home' %}">Podcast Generator</a>#}
+{#      </div>#}
+{#      </div>#}
+{#    </div>#}
+{#</nav>#}
+{#    <div class="px-3 py-1">#}
+{#    <p><h4>Choose one of the following:</h4></p>#}
+{#    <form method="post" action="{% url 'form' %}">#}
+{#        {% csrf_token %}#}
+{#        {% for genre in genres %}#}
+{#            <input type="radio" name="genre" value="{{ genre }}">#}
+{#            <label>{{ genre }}</label><br>#}
+{#        {% endfor %}#}
+{#        <br>#}
+{#        <button type="submit" class="btn btn-dark">Confirm</button>#}
+{#    </form>#}
+{#    </div>#}
+{##}
+{##}
+{#<footer class="navbar bg-dark border-top border-top-dark">#}
+{#  <div class="container-fluid">#}
+{#    <div class="row">#}
+{#    </div>#}
+{#  </div>#}
+{#</footer>#}
+{##}
+{##}
+{#</body>#}
+{#</html>#}
+
 {% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <title>Podcast Generator</title>
-    <link rel="stylesheet" href={% static "style.css" %}>
+    <link rel="stylesheet" href="{% static "style.css" %}">
 
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
-
+    <style>
+        /* Custom CSS for the form section */
+        .form-container {
+            max-width: 500px;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Podcast Generator</h1>
-    <p>Choose one of the category below:</p>
-    <form method="post" action="{% url 'form' %}">
-        {% csrf_token %}
-        {% for genre in genres %}
-            <input type="radio" name="genre" value="{{ genre }}">
-            <label>{{ genre }}</label><br>
-        {% endfor %}
-        <button type="submit" class="btn btn-dark">Submit</button>
-    </form>
+
+<nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <a class="navbar-brand my-brand" href="{% url 'home' %}">Podcast Generator</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container py-3">
+    <div class="form-container">
+        <h4>Choose one of the following:</h4>
+        <form method="post" action="{% url 'form' %}">
+            {% csrf_token %}
+            {% for genre in genres %}
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="genre" value="{{ genre }}" id="{{ genre }}">
+                    <label class="form-check-label" for="{{ genre }}">{{ genre }}</label>
+                </div>
+            {% endfor %}
+            <div class="text-center">
+                <button type="submit" class="btn btn-dark mt-3">Confirm</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<footer class="navbar bg-dark border-top border-top-dark">
+  <div class="container">
+    <div class="row">
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

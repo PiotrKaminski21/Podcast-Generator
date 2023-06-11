@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html>
+
 <head>
     <title>Podcast Generator</title>
     {% block css_files %}
@@ -10,6 +10,7 @@
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
+
 
 </head>
 <body>
@@ -30,18 +31,80 @@
   </div>
 </nav>
 
-
-    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tristique et ipsum sit amet laoreet. Vestibulum ullamcorper libero at facilisis egestas. Phasellus dictum scelerisque nisi, a euismod libero auctor vitae. Aenean porttitor gravida mollis. Duis diam est, maximus sit amet leo sit amet, fermentum dictum eros. Donec placerat accumsan libero, vitae malesuada urna consectetur in. Integer eget suscipit lacus, quis vehicula erat. Mauris vulputate feugiat ipsum. Sed commodo, mauris id pellentesque viverra, tortor urna rhoncus mauris, id semper ipsum justo scelerisque urna. Nunc vitae commodo sapien, id suscipit ante. In sagittis nisi metus, non ornare turpis sagittis ac. Donec eu diam venenatis nulla ornare molestie. Pellentesque ac leo sit amet elit aliquet vulputate. Nulla at enim nec mauris tempor placerat. Vivamus maximus condimentum nulla in commodo. Donec tincidunt, tortor non auctor tincidunt, dolor orci gravida diam, in viverra risus mauris molestie ipsum.
-
-Donec molestie dui arcu, ut sagittis odio congue eu. Mauris imperdiet rutrum tortor nec gravida. Nullam sit amet nisi auctor, blandit dui et, auctor magna. Mauris vel pretium felis. Suspendisse gravida, leo vel placerat tempor, eros massa laoreet turpis, at sodales eros mi quis neque. Vestibulum at velit vel ante congue porta. Morbi dignissim malesuada commodo. Duis imperdiet ligula libero, nec sagittis dui tempus quis. Donec rhoncus risus metus, id eleifend lectus volutpat ut. Quisque sit amet lacus eu elit facilisis molestie. Fusce auctor purus in mauris tincidunt, at venenatis lectus aliquet. Integer elit tortor, commodo vitae iaculis ut, aliquam a quam. Aliquam a ullamcorper magna.
-
-Sed non iaculis turpis, id ultrices arcu. Morbi porttitor lacinia sapien sed efficitur. Integer a porta libero. Sed commodo sapien lorem, vel commodo arcu laoreet at. Donec et mi ex. Morbi venenatis rhoncus turpis, nec dignissim lorem rhoncus at. Duis interdum auctor ligula, vel convallis massa commodo et. Curabitur quis semper nisi. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nunc luctus libero non tincidunt tempor. Praesent condimentum odio eget lobortis dignissim. Cras sapien turpis, feugiat at fringilla eget, mattis eget lectus. Quisque ac posuere magna, vitae tristique urna. Aenean finibus dui ac nisi finibus placerat.
-
-Morbi mattis leo sit amet sem suscipit, vel ullamcorper sapien eleifend. Nullam nec mi sed elit commodo ornare id lacinia leo. Morbi non consequat urna, quis placerat nunc. Suspendisse ac tellus libero. Pellentesque ullamcorper pretium tempus. Proin pulvinar, urna in tristique consequat, libero enim accumsan ante, id ullamcorper velit massa a turpis. Nulla facilisi. Ut tristique lorem sit amet nisl laoreet maximus. Aenean semper odio quis augue dictum dignissim. Duis blandit felis justo, eget consectetur enim vestibulum ac. Pellentesque imperdiet erat tortor, id molestie odio pretium nec. Pellentesque quis sem ac leo finibus faucibus. Nulla eget quam vitae neque consectetur accumsan. Nam at porta mi.
+<div class="px-3 py-2">
+    <div class="col-md-5">
+    <p> The Podcast Generator is an application created and developing by a team of four individuals,
+        aimed at helping users select podcasts based on their personal preferences and interests.
+        This user-friendly application streamlines the process of finding the perfect podcast from a vast collection of categories.
     </p>
-    <img src="{% static 'images/itunes_logo.png' %}" alt="iTunes Logo">
-    <img src="{% static 'images/apple_logo.png' %}" alt="Apple Logo">
-    <a href="{% url 'form' %}" class="btn btn-dark" role ="button">Dalej</a>
 
+    <p> With the Podcast Generator, discovering your next favorite podcast is a breeze.
+        The application features an form that allows users to customize their podcast preferences,
+        on based genres. By selecting specific one of the category , users can narrow down their search and
+        receive tailored recommendations that align with their interests.
+    </p>
+
+    <br>
+    <a href="{% url 'form' %}" class="btn btn-dark" role ="button">Choose your Podcast!</a><br><br>
+
+    <a href="https://apps.apple.com/pl/app/podcasty/id525463029?l=pl">
+    <img src="{% static 'images/itunes_logo.png' %}" alt="iTunes Logo">
+    </a>
+
+    <a href="https://www.apple.com/">
+    <img src="{% static 'images/apple_logo.png' %}" alt="Apple Logo">
+    </a>
+
+        <br><br>
+    <p>The Podcast Generator exclusively chooses podcasts available on the <b> Apple Podcasts</b>. Once users input their preferences,
+        the Podcast Generator generates a curated list of podcast recommendations, featuring both popular shows and other otherwise go unnoticed.
+        Each recommendation is accompanied by a brief description, giving users insight into the podcast's content,
+        format, and host. Users can then listen to the recommended episodes directly within the Apple
+        Podcasts app or access them through their preferred podcast platform.</p>
+
+    <p class="text-end">
+        <i>Whether you're seeking educational content, thought-provoking discussions,
+        captivating storytelling, or light-hearted entertainment,
+        the Podcast Generator is your go-to application for discovering and enjoying podcasts tailored to your interests.
+        Say goodbye to endless scrolling and uncertainty, and let the Podcast Generator guide you to the perfect
+            podcast for your next listening experience. </i>
+    </p>
+    </div>
+</div>
+
+<footer class="navbar bg-dark border-top border-top-dark">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-x1">
+        <div class="text-left">
+          <span class="text-light">Authors</span>
+        </div>
+      </div>
+      <div class="col">
+        <a href="https://github.com/t-wojciechowski" class="text-light">
+          @t-wojciechowski
+        </a>
+      </div>
+      <div class="col">
+        <a href="https://github.com/PiotrKaminski21" class="text-light">
+          @PiotrKaminski21
+        </a>
+      </div>
+      <div class="col">
+        <a href="https://github.com/OlaJedrzejczyk" class="text-light">
+          @OlaJedrzejczyk
+        </a>
+      </div>
+      <div class="col">
+        <a href="https://github.com/TomaszDrobinik" class="text-light">
+          @TomaszDrobinik
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
+
+
+
