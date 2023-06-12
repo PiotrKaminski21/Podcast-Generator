@@ -1,0 +1,107 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Podcast Generator</title>
+    {% block css_files %}
+     <link rel="stylesheet" href="{% static "style.css" %}">
+    {% endblock %}
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+
+<body>
+<nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col">
+        <a class="navbar-brand my-brand" href="{% url 'home' %}">Podcast Generator</a>
+      </div>
+      <div class="col">
+        <a class="navbar-brand my-brand" href="{% url 'form' %}">Go to form</a>
+      </div>
+      <div class="col">
+        <a class="navbar-brand my-brand" href="{% url 'result' %}">Result</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="px-3 py-2">
+    <div class="col-md-5">
+    <p> The Podcast Generator is an application created and developing by a team of four individuals,
+        aimed at helping users select podcasts based on their personal preferences and interests.
+        This user-friendly application streamlines the process of finding the perfect podcast from a vast collection of categories.
+    </p>
+
+    <p> With the Podcast Generator, discovering your next favorite podcast is a breeze.
+        The application features an form that allows users to customize their podcast preferences,
+        on based genres. By selecting specific one of the category , users can narrow down their search and
+        receive tailored recommendations that align with their interests.
+    </p>
+
+    <br>
+    <a href="{% url 'form' %}" class="btn btn-dark" role ="button">Choose your Podcast!</a><br><br>
+    <a href="https://apps.apple.com/pl/app/podcasty/id525463029?l=pl">
+    <img src="{% static 'images/itunes_logo.png' %}" alt="iTunes Logo">
+    </a>
+
+    <a href="https://www.apple.com/">
+        <img src="{% static 'images/apple_logo.png' %}" alt="Apple Logo"> </a>
+
+        <br><br>
+    <p>The Podcast Generator exclusively chooses podcasts available on the <b> Apple Podcasts</b>. Once users input their preferences,
+        the Podcast Generator generates a curated list of podcast recommendations, featuring both popular shows and other otherwise go unnoticed.
+        Each recommendation is accompanied by a brief description, giving users insight into the podcast's content,
+        format, and host. Users can then listen to the recommended episodes directly within the Apple
+        Podcasts app or access them through their preferred podcast platform.</p>
+
+    <p class="text-end">
+        <i>Whether you're seeking educational content, thought-provoking discussions,
+        captivating storytelling, or light-hearted entertainment,
+        the Podcast Generator is your go-to application for discovering and enjoying podcasts tailored to your interests.
+        Say goodbye to endless scrolling and uncertainty, and let the Podcast Generator guide you to the perfect
+            podcast for your next listening experience. </i>
+    </p>
+    </div>
+</div>
+
+<footer class="navbar bg-dark border-top border-top-dark">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-x1">
+        <div class="text-left">
+          <span class="text-light">Authors</span>
+        </div>
+      </div>
+      <div class="col">
+        <a href="https://github.com/t-wojciechowski" class="text-light">
+          @t-wojciechowski
+        </a>
+      </div>
+      <div class="col">
+        <a href="https://github.com/PiotrKaminski21" class="text-light">
+          @PiotrKaminski21
+        </a>
+      </div>
+      <div class="col">
+        <a href="https://github.com/OlaJedrzejczyk" class="text-light">
+          @OlaJedrzejczyk
+        </a>
+      </div>
+      <div class="col">
+        <a href="https://github.com/TomaszDrobnik" class="text-light">
+          @TomaszDrobnik
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
+
+
+
