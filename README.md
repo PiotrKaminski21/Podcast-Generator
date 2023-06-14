@@ -5,7 +5,8 @@ Project as part of completing the SDA Academy course.
 
 Simple podcast app created with API Apple
 
-##Table of contents
+## Table of contents
+
 -General info
 The aim of the project was to practise creating a project in Django, team working.
 
