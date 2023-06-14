@@ -7,14 +7,14 @@ Simple podcast app created with API Apple
 
 ## Table of contents
 
--General info
+-General info:
 The aim of the project was to practise creating a project in Django, team working.
 
--Technologies
+-Technologies:
 Django, Python, Github
 
--Project status
-in progress
+-Project status:
+In progress
 
--Features
-Listen to your favourite podcasts
+-Features:
+Choose your favourite podcast genre and dive into listening
