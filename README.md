@@ -18,3 +18,7 @@ In progress
 
 -Features:
 Choose your favourite podcast genre and dive into listening
+
+### How to run:
+
+
