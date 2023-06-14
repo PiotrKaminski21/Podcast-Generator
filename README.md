@@ -22,6 +22,10 @@ Choose your favourite podcast genre and dive into listening
 ### How to run:
 
 Pull the repo, run in terminal command: 
+
 "python manage.py makemigrations"
+
 "python manage.py migrate"
+
 "python manage.py runserver"
+
