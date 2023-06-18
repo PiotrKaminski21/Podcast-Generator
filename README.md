@@ -8,18 +8,24 @@ Simple podcast app created with API Apple, the main goal of app is to find suita
 How it's working ? 
 
 1. Running our App ( we can choose other port or leave it to open it at default) and click to link in terminal
+   
 ![image](https://github.com/PiotrKaminski21/Podcast-Generator/assets/134416911/b1d0f645-cea0-43e9-b7d6-59e29d612cdc)
 
-2. We are on main page. Choose Your Podcast!
+3. We are on main page. Choose Your Podcast!
+
 ![image](https://github.com/PiotrKaminski21/Podcast-Generator/assets/134416911/6f7f25f6-4cdd-4cd1-aba5-ab161819534e)
 
-3. Choose Your category you are interested and confirm it
+5. Choose Your category you are interested and confirm it
+
 ![image](https://github.com/PiotrKaminski21/Podcast-Generator/assets/134416911/bc4457f2-f5a9-4dc8-9de5-a13370f79e47)
 
-4. Here Are Your result with one of the best podcast. Read the description and choose one.
+5. Here Are Your result with one of the best podcast. Read the description and choose one.
+   
 ![image](https://github.com/PiotrKaminski21/Podcast-Generator/assets/134416911/5dd76ff6-a328-45b0-a8b5-fa2fee8e1dbd)
 
-5. Go to: One of podcast, choose Episode and start listening
+7. Go to: One of podcast, choose Episode and start listening
+
+   
 ![image](https://github.com/PiotrKaminski21/Podcast-Generator/assets/134416911/77f643da-9d10-4779-94b8-9a3d9a3cc3dc)
 
 
